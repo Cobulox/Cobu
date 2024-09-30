@@ -1,0 +1,1084 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: LMono;
+    src: url(fonts/LeagueMono-VF.ttf);
+}
+
+body{
+	background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(34,7,82,1) 33%, rgba(96,0,159,1) 100%);
+}
+
+#preloader {
+    background: rgba(255, 255, 255, 1) url('images/Vector 1 1.gif') no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 1; /* Start with full opacity */
+    transition: opacity 0.5s ease-out; /* Smooth transition effect */
+}
+
+/* Class for fade-out effect */
+#preloader.fade-out {
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction during fade-out */
+}
+
+body.no-scroll {
+    overflow: hidden; /* Disables scrolling */
+}
+
+main{
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/*header*/
+#header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.container{
+	padding: 5px 20px;
+}
+
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#logo{
+	width: 200px;
+}
+
+#logo-min{
+    display: none;
+}
+
+nav ul li{
+	list-style: none;
+	margin: 10px 0;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav ul li a{
+	color: #fff;
+	text-decoration: none;
+	font-family: LMono;
+	font-weight: 500;
+	font-stretch: 200%;
+	font-size: 25px;
+	position: relative;
+}
+nav ul li a::after{
+	content: '';
+	width: 0;
+	height: 30px;
+	background: rgba(0,202,226,1) ;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	transition: 0.3s;
+	z-index: -1;
+}
+nav ul li a:hover::after{
+	width: 100%;
+}
+
+.section{
+	width: 60%;
+	margin: 0 auto;
+}
+
+/* .btn-menu {
+    display: none;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: LMono;
+    padding: 2px;
+    z-index: 6;
+    position: relative;
+    width: 46px;
+    height: 40px;
+    overflow: hidden;
+    text-align: left;
+}
+
+button {
+    background: transparent;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 0;
+} */
+
+/* General Styles */
+/* Hidden menu overlay */
+.btn-menu {
+    display: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: LMono;
+    font-weight: 500;
+	font-stretch: 200%;
+    z-index: 1501;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position:fixed;
+    right: 20px;
+    top: 30px;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; 
+    /* background-color: rgba(0, 0, 0, 0.9);  */
+    display: none; 
+    z-index: 1500; 
+    overflow: hidden; 
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-overlay.active {
+    display: block; 
+}
+
+/* Overlay menu styling */
+.menu-overlay ul.overlay-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    z-index:  999;
+}
+
+.menu-overlay ul.overlay-menu li {
+    list-style: none;
+}
+
+.menu-overlay ul.overlay-menu li a {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: LMono;
+    padding: 10px;
+}
+
+.menu-overlay ul.overlay-menu li a:hover {
+    color: rgba(0, 202, 226, 1);
+}
+
+/* Active class to show the overlay */
+.menu-overlay.active {
+    display: flex;
+}
+
+/* #branko{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: red;
+    z-index: 9000;
+    top: 0;
+    left: 0;
+} */
+
+
+/*baner*/
+/* #baner{
+	width: 80%;
+	height: 100%;
+	display: block;
+}
+
+.baner-wraper{
+	min-height: 100vh;
+	display: flex;
+	align-content: center;
+    align-items: center;
+	justify-content: center;
+} */
+
+.baner-wraper {
+    display: flex;
+    justify-content: center; /* Aligns items horizontally */
+    align-items: center; /* Aligns items vertically */
+    min-height: 100vh;
+}
+
+#banerlevo {
+    width: 50%; /* Larger size */
+    /* max-width: 50%; */
+    height: auto;
+}
+
+#banerdesno {
+    width: 30%; /* Smaller size */
+    /* max-width: 30%; */
+    height: auto;
+}
+
+/*about*/
+#about h3, #about p {
+	color: #fff;
+}
+#about h3{
+	font-size: 5rem;
+	font-family: LMono;
+	font-stretch: 200%;
+	padding: 20px 0 0 0;
+}
+
+#about p{
+	font-size: 2.5rem;
+	font-family: LMono;
+	text-align: left;
+	font-weight: bold;
+	line-height: 3.5rem;
+	padding: 10px 0;
+}
+
+#about a{
+	display: inline-block;
+	font-size: 3rem;
+	font-family: LMono;
+	font-weight: bold;
+	background: #fff;
+	color: rgba(96,0,159,1);
+	text-decoration: none;
+	padding: 10px;
+	margin-bottom: 25px;
+	border-radius: 10px;
+	border: #fff 5px solid;
+}
+#about a:hover{
+	background: rgba(96,0,159,1);
+	color: #fff;
+	/* border: #fff 5px solid; */
+}
+
+/*portfolio*/
+#portfolio h3{
+	font-size: 5rem;
+	font-family: LMono;
+	font-stretch: 200%;
+	color: #fff;
+	padding: 20px 0 0 0;
+}
+
+.wraper{
+	display: block;
+	padding-top: 25px;
+}
+
+.collasible {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 15px 0;
+    position: relative;
+}
+
+.collasible input {
+    display: none; 
+}
+
+.collasible label {
+    position: relative;
+    border-top: 5px #fff solid;
+    border-bottom: 5px #fff solid;
+    padding: 15px 40px 15px 0;
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    font-family: LMono;
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.collasible label:after {
+    content: '';
+    position: absolute;
+    right: 15px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 30px; 
+    height: 30px; 
+    background: url('images/contact/next.png') no-repeat center center;
+    background-size: contain;
+    transition: all 0.5s ease;
+}
+
+.collasible input:checked + label:after{
+	transform: translateY(-50%) rotate(90deg);
+}
+
+.collasible-text {
+    max-height: 0; /* Start with height of 0 for the collapsed state */
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Transition for max-height and opacity */
+    padding: 0 20px; /* Optional: Padding for the content inside */
+}
+
+.collasible input:checked ~ .collasible-text {
+    max-height: 100%; /* Large enough value to ensure all content is visible */
+    opacity: 1;
+    padding-bottom: 25px;
+}
+
+.collasible-text h2{
+	margin: 15px 0;
+	font-size: 1.5rem;
+	color: #fff;
+	font-family: LMono;
+}
+
+.collasible-text a{
+	text-decoration: none;
+	color: rgba(0,202,226,1);
+}
+
+.media {
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(3, 1fr); */
+    gap: 10px; /* Space between grid items */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+}
+
+.media video {
+    grid-column: span 3; /* Make the video span all three columns */
+    width: 100%; 
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; 
+    cursor: pointer;
+}
+
+.media img {
+    width: 285px; 
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.media img:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9); /* Black background with opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+	height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*conact*/
+#contact h3{
+	font-size: 5rem;
+	font-family: LMono;
+	font-stretch: 200%;
+	color: #fff;
+	padding: 20px 0 0 0;
+}
+
+#contact .info{
+	font-size: 2rem;
+	font-family: LMono;
+	text-align: left;
+	font-weight: bold;
+	line-height: 3rem;
+	color: #fff;
+	padding: 25px 0 0 0;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.info-grupa{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-grupa img{
+    width: 50px;
+    height: 50px;
+}
+
+#contact a{
+    color: #fff;
+	text-decoration: none;
+	position: relative;
+}
+
+#contact a::after{
+	content: '';
+	width: 0;
+	height: 3rem;
+	background: rgba(0,202,226,1) ;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	transition: 0.3s;
+	z-index: -1;
+}
+
+#contact a:hover::after{
+	width: 100%;
+}
+
+.contact-right{
+    display: none;
+}
+
+form{
+	width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: stretch;
+    margin: auto 0;
+    flex-wrap: nowrap;
+	padding-bottom: 20px;
+}
+
+form input, form textarea{
+	width: 100%;
+	border: 0;
+	outline: none;
+	background-color: #fff;
+	padding: 10px;
+	margin: 10px 0;
+	color: rgba(96,0,159,1);
+	font-family: LMono;
+	font-size: 1.5rem;
+	border-radius: 10px;
+}
+
+::placeholder {
+    color: rgba(64, 0, 107, 0.705);
+}
+
+form button{
+	display: inline-block;
+	font-size: 1.5rem;
+	font-family: LMono;
+	font-weight: bold;
+	background: #fff;
+	color: rgba(96,0,159,1);
+	text-decoration: none;
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 10px;
+	border: #fff 5px solid;
+}
+
+form button:hover{
+	background: rgba(96,0,159,1);
+	color: #fff;
+	cursor: pointer;
+}
+
+textarea{
+	resize: none;
+}
+
+#msg{
+	color: rgba(0,202,226,1);
+	margin-top: -20px;
+	padding: 10px 0;
+	display: block;
+	position: absolute;
+}
+ 
+#footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 996;
+    padding: 5px 20px;
+    max-width: 20%; 
+    transition: transform 0.3s ease-in-out;
+}
+
+/* .social-icons ul li{
+	list-style: none;
+    margin: 10px 0;
+}
+
+.social-icons ul li img{
+    display: none;
+    z-index: 998;
+    width: 6%;
+}
+
+.social-icons ul li a{
+	color: #fff;
+	text-decoration: none;
+	font-family: LMono;
+	font-weight: 500;
+	font-stretch: 200%;
+	font-size: 25px;
+	position: relative;
+}
+
+.social-icons ul li a::after{
+	content: '';
+	width: 0;
+	height: 30px;
+	background: rgba(0,202,226,1) ;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	transition: 0.3s;
+	z-index: -1;
+}
+.social-icons ul li a:hover::after{
+	width: 100%;
+} */
+
+.textlink li{
+	list-style: none;
+    margin: 10px 0;
+}
+
+.textlink li a{
+	color: #fff;
+	text-decoration: none;
+	font-family: LMono;
+	font-weight: 500;
+	font-stretch: 200%;
+	font-size: 25px;
+	position: relative;
+}
+
+.textlink li a::after{
+	content: '';
+	width: 0;
+	height: 30px;
+	background: rgba(0,202,226,1) ;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	transition: 0.3s;
+	z-index: -1;
+}
+.textlink li a:hover::after{
+	width: 100%;
+}
+
+.imglink li{
+	list-style: none;
+    margin: 10px 0;
+}
+
+.imglink li a img{
+    display: none;
+    width: 6%;
+}
+
+.copyright{
+	width: 100%;
+	text-align: center;
+	margin-top: 25px;
+	padding-top: 25px;
+}
+
+.copyright p{
+	font-size: 1rem;
+	font-family: LMono;
+	color: #fff;
+}
+
+
+/* Responsive Design */
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+    /* Styles for laptops */
+	#logo{
+        width: 170px;
+    }
+
+    nav ul li a{
+        font-size: 18px;
+    }
+
+    #about h3{
+        font-size: 3.6rem;
+    }
+
+    #about p{
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    #about a{
+        font-size: 2rem;
+    }
+
+    #portfolio h3{
+        font-size: 3.6rem;
+    }
+
+    .media img {
+        width: 260px; 
+        height: 200px;
+    }
+
+    .modal-content {
+        height: 60%;
+    }
+
+    #contact h3{
+        font-size: 3.6rem;
+    }
+
+    .info-grupa img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .textlink li a{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Tablets Landscape */
+
+    #logo{
+        width: 130px;
+    }
+
+    nav ul li a{
+        font-size: 14px;
+    }
+
+    #about h3{
+        font-size: 2.7rem;
+    }
+
+    #about p{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    #about a{
+        font-size: 2rem;
+    }
+
+    #portfolio h3{
+        font-size: 2.7rem;
+    }
+
+    .collasible label {
+        font-size: 1.5rem;
+    }
+
+    .collasible-text h2{
+        font-size: 1rem;
+    }
+
+    .media img {
+        width: 200px; 
+        height: 150px;
+    }
+
+    .modal-content {
+        height: 50%;
+    }
+
+    #contact h3{
+        font-size: 2.7rem;
+    }
+
+    .info-grupa img{
+        width: 40px;
+        height: 40px;
+    }
+
+    #contact p{
+        font-size: 1.8rem;
+    }
+
+    .textlink li a{
+        font-size: 14px;
+    }
+
+    .copyright{
+        margin-top: 5px;
+        padding-top: 20px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    /* Tablets Portrait */
+
+    #logo{
+        display: none;
+    }
+
+    #logo-min{
+        width: 30%;
+        display: block;
+    }
+    
+    /* napravi hamburger  */
+    .btn-menu {
+        display: block; /* Show the button on smaller screens */
+    }
+
+    nav ul {
+        display: none; /* Keep hidden on smaller screens unless active */
+    }
+
+    .baner-wraper {
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+
+    #banerdesno {
+        width:60%; 
+        height: auto;
+    }
+
+    #banerlevo {
+        width:70%; 
+        height:300px;
+        object-fit: cover;
+    }
+
+    #about h3{
+        font-size: 2rem;
+    }
+
+    #about p{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    #about a{
+        font-size: 1.5rem;
+    }
+
+    #portfolio h3{
+        font-size: 2rem;
+    }
+
+    .collasible label {
+        font-size: 1.2rem;
+    }
+
+    .collasible-text h2{
+        font-size: 1.2rem;
+    }
+
+    .media img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .modal-content {
+        height: 20%;
+    }
+
+    #contact h3{
+        font-size: 2rem;
+    }
+
+    .info-grupa img{
+        width: 40px;
+        height: 40px;
+    }
+
+    #contact p{
+        font-size: 1.2rem;
+    }
+
+    .textlink li a{
+        display: none;
+    }
+
+    .imglink li a img{
+        display: flex;
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    /* Small Phones */
+    
+    #logo{
+        display: none;
+    }
+
+    #logo-min{
+        width: 30%;
+        display: block;
+    }
+
+    /* napravi hamburger  */
+    .btn-menu {
+        display: block; /* Show the button on smaller screens */
+    }
+
+    nav ul {
+        display: none; /* Keep hidden on smaller screens unless active */
+    }
+    
+    .baner-wraper {
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+
+    #banerdesno {
+        width:60%; 
+        height: auto;
+    }
+
+    #banerlevo {
+        width:80%; 
+        height:300px;
+        object-fit: cover;
+    }
+
+    #about h3{
+        font-size: 2rem;
+    }
+
+    #about p{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    #about a{
+        font-size: 1.5rem;
+    }
+
+    #portfolio h3{
+        font-size: 2rem;
+    }
+
+    .collasible label {
+        font-size: 1.2rem;
+    }
+
+    .collasible-text h2{
+        font-size: 1.2rem;
+    }
+
+    .media img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .modal-content {
+        height: 20%;
+    }
+
+    #contact h3{
+        font-size: 2rem;
+    }
+
+    .info-grupa img{
+        width: 40px;
+        height: 40px;
+    }
+
+    #contact p{
+        font-size: 1.2rem;
+    }
+
+    .textlink li a{
+        display: none;
+    }
+
+    .imglink li a img{
+        display: flex;
+        width: 60%;
+    }
+
+
+}
+
+@media screen and (max-width: 480px) {
+    /* Extra Small Phones */
+    
+    #logo{
+        display: none;
+    }
+
+    #logo-min{
+        width: 15%;
+        display: block;
+    }
+
+    /* napravi hamburger  */
+    .btn-menu {
+        display: block; /* Show the button on smaller screens */
+        font-size: 0.8rem;
+    }
+
+    nav ul {
+        display: none; /* Keep hidden on smaller screens unless active */
+    }
+
+    .baner-wraper {
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+
+    #banerdesno {
+        width:60%; 
+        height: auto;
+    }
+
+    #banerlevo {
+        width:80%; 
+        height:300px;
+        object-fit: cover;
+    }
+
+    .btn-menu {
+        top: 20px;
+    }
+
+    #about h3{
+        font-size: 1.2rem;
+    }
+
+    #about p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #about a{
+        font-size: 1rem;
+    }
+
+    #portfolio h3{
+        font-size: 1.2rem;
+    }
+
+    .collasible label:after {
+        width: 20px;
+        height: 20px;
+    }
+
+    .collasible label {
+        border-top: 2px #fff solid;
+        border-bottom: 2px #fff solid;
+    }
+
+    .collasible label {
+        font-size: 1rem;
+    }
+
+    .collasible-text h2{
+        font-size: 1rem;
+    }
+
+    .media img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .modal-content {
+        height: 10%;
+    }
+
+    #contact h3{
+        font-size: 1.2rem;
+    }
+
+    .info-grupa img{
+        width: 30px;
+        height: 30px;
+    }
+
+    #contact .info{
+        font-size: 1rem;
+    }
+
+    .textlink li a{
+        display: none;
+    }
+
+    .imglink li a img{
+        display: flex;
+        width: 100%;
+    }
+
+}
