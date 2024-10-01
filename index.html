@@ -229,18 +229,6 @@
                             <a href="https://github.com/Cobulox" target="_blank">Gitgub</a>
                         </div>
                     </div>
-                    
-
-                    <!-- <P>Or write me here :)</P> -->
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit">Send</button>
-                    </form>
-                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -270,24 +258,6 @@
     </footer>
 
 
-    <!-- <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxyEvGhtnNEs40E4dyY_WB46dw9A7pLAUdWe7fngMKK31IcJtvtFu9BSGBhEt5F3V54Vg/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                },2500)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-    </script> -->
 
     <script>
         var loader = document.getElementById("preloader");
