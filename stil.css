@@ -11,7 +11,7 @@
 }
 
 body {
-    position: relative;
+    position: absolute;
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(34,7,82,1) 33%, rgba(96,0,159,1) 100%), url(images/abstract-white-background_71374-1750.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
