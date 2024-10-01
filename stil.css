@@ -23,6 +23,7 @@ body {
     background: rgb(2,0,36);
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(34,7,82,1) 33%, rgba(96,0,159,1) 100%), url(images/abstract-white-background_71374-1750.jpg);
     min-height: 100vh;
+    background-clip: border-box;
     background-attachment: fixed;
     background-repeat: no-repeat; /* Prevent repetition */
     background-size: cover; /* Ensure it covers the entire viewport */
