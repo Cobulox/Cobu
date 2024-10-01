@@ -407,7 +407,7 @@ button {
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
-    z-index: 1000;
+    z-index: 1502;
     left: 0;
     top: 0;
     width: 100%;
@@ -697,7 +697,8 @@ textarea{
     }
 
     .modal-content {
-        height: 60%;
+        width: auto;
+        height: 580px;
     }
 
     #contact h3{
@@ -756,7 +757,8 @@ textarea{
     }
 
     .modal-content {
-        height: 50%;
+        width: auto;
+        height: 450px;
     }
 
     #contact h3{
@@ -850,7 +852,8 @@ textarea{
     }
 
     .modal-content {
-        height: 20%;
+        width: 750px;
+        height: auto;
     }
 
     #contact h3{
@@ -885,13 +888,14 @@ textarea{
     }
 
     #logo-min{
-        width: 30%;
+        width: 20%;
         display: block;
     }
 
     /* napravi hamburger  */
     .btn-menu {
         display: block; /* Show the button on smaller screens */
+        font-size: 1rem;
     }
 
     nav ul {
@@ -915,12 +919,12 @@ textarea{
     }
 
     #about h3{
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     #about p{
-        font-size: 1.2rem;
-        line-height: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.2rem;
     }
 
     #about a{
@@ -928,7 +932,7 @@ textarea{
     }
 
     #portfolio h3{
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .collasible label {
@@ -945,11 +949,12 @@ textarea{
     }
 
     .modal-content {
-        height: 20%;
+        width: 460px ;
+        height: auto;
     }
 
     #contact h3{
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .info-grupa img{
@@ -957,7 +962,7 @@ textarea{
         height: 40px;
     }
 
-    #contact p{
+    #contact .info{
         font-size: 1.2rem;
     }
 
@@ -989,6 +994,7 @@ textarea{
     .btn-menu {
         display: block; /* Show the button on smaller screens */
         font-size: 0.8rem;
+        top: 20px;
     }
 
     nav ul {
@@ -1011,17 +1017,13 @@ textarea{
         object-fit: cover;
     }
 
-    .btn-menu {
-        top: 20px;
-    }
-
     #about h3{
         font-size: 1.2rem;
     }
 
     #about p{
         font-size: 1rem;
-        line-height: 1.5rem;
+        line-height: 1.2rem;
     }
 
     #about a{
@@ -1056,7 +1058,8 @@ textarea{
     }
 
     .modal-content {
-        height: 10%;
+        width: 330px;
+        height: auto;
     }
 
     #contact h3{
