@@ -10,12 +10,23 @@
     src: url(fonts/LeagueMono-VF.ttf);
 }
 
-body {
+/* body {
     position: relative;
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(34,7,82,1) 33%, rgba(96,0,159,1) 100%), url(images/abstract-white-background_71374-1750.jpg);
     background-attachment: fixed;
     background-repeat: repeat-x;
     background-size: cover;
+    background-blend-mode: multiply;
+} */
+
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(34,7,82,1) 33%, rgba(96,0,159,1) 100%), url(images/abstract-white-background_71374-1750.jpg);
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat; /* Prevent repetition */
+    background-size: cover; /* Ensure it covers the entire viewport */
+    background-position: center; /* Center the image */
     background-blend-mode: multiply;
 }
 
@@ -710,6 +721,10 @@ textarea{
 @media screen and (min-width: 601px) and (max-width: 768px) {
     /* Tablets Portrait */
 
+    body {
+        background-attachment: scroll;
+    }
+
     #logo{
         display: none;
     }
@@ -805,6 +820,10 @@ textarea{
 
 @media screen and (max-width: 600px) {
     /* Small Phones */
+
+    body {
+        background-attachment: scroll; 
+    }
     
     #logo{
         display: none;
@@ -903,6 +922,9 @@ textarea{
 
 @media screen and (max-width: 480px) {
     /* Extra Small Phones */
+    body {
+        background-attachment: scroll;
+    }
     
     #logo{
         display: none;
