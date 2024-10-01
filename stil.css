@@ -11,12 +11,8 @@
 }
 
 body {
-    position: relative;
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(34,7,82,1) 33%, rgba(96,0,159,1) 100%), url(images/abstract-white-background_71374-1750.jpg);
-    background-attachment: fixed;
-    background-repeat: repeat-x;
-    background-size: cover;
-    background-blend-mode: multiply;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(34,7,82,1) 33%, rgba(96,0,159,1) 100%);
 }
 
 
@@ -519,7 +515,6 @@ textarea{
 	display: block;
 	position: absolute;
 } */
- 
 
 /* footer */
 #footer {
