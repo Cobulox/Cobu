@@ -672,8 +672,8 @@ nav ul li a:hover::after{
     }
 
     #banerdesno {
-        width:60%; 
-        height: auto;
+        width:auto; 
+        height: 50%;
     }
 
     #banerlevo {
