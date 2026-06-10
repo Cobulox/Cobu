@@ -587,6 +587,11 @@ nav ul li a:hover::after{
         font-size: 14px;
     }
 
+    #banerdesno {
+        width:auto; 
+        height: 50%;
+    }
+
     #about h3{
         font-size: 2.7rem;
     }
