@@ -802,6 +802,7 @@ nav ul li a:hover::after{
 
     .collasible-text h2{
         font-size: 0.8rem;
+        margin:15px 0;
     }
 
     .media img {
