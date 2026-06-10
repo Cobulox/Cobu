@@ -704,7 +704,9 @@ nav ul li a:hover::after{
     }
 
     .collasible-text h2{
-        font-size: 1.2rem;
+        font-size: 1rem;
+        margin:15px 0;
+        text-align: left;
     }
 
     .media img {
@@ -803,6 +805,7 @@ nav ul li a:hover::after{
     .collasible-text h2{
         font-size: 0.8rem;
         margin:15px 0;
+        text-align: left;
     }
 
     .media img {
@@ -913,6 +916,7 @@ nav ul li a:hover::after{
     .collasible-text h2{
         font-size: 0.8rem;
         margin:15px 0;
+        text-align: left;
     }
 
     .media img {
